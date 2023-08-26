@@ -1,3 +1,4 @@
+import { type LayoutProps } from '@/.next/types/app/layout'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -9,11 +10,9 @@ export const metadata: Metadata = {
   description: '',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+type Props = {} & LayoutProps
+
+export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" className="h-full">
       <body className={`${inter.className} dark h-full`}>{children}</body>
