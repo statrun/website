@@ -11,7 +11,8 @@
     "pkg:bump": "ncu -u"
   },
   "engines": {
-    "node": ">= 20"
+    "pnpm": ">= 8",
+    "node": ">= 18"
   },
   "dependencies": {
     "@radix-ui/react-icons": "1.3.0",
