@@ -14,13 +14,14 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: pnpm/action-setup@master
+      - uses: oven-sh/setup-bun@main
         with:
-          version: latest
+          bun-version: latest
+
       - uses: actions/checkout@master
-      - run: rm -rf yarn.lock pnpm-lock.yaml package-lock.json
-      - run: pnpx npm-check-updates -u
-      - run: pnpm i --no-frozen-lockfile
+      - run: rm -rf yarn.lock pnpm-lock.yaml bun.lockb
+      - run: bunx npm-check-updates -u
+      - run: bun i -f
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@main

@@ -5,12 +5,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "rimraf --glob **/node_modules **/.next pnpm-lock.yaml",
+    "clean": "rimraf --glob **/node_modules **/.next bun.lockb",
     "pkg:check": "ncu",
     "pkg:bump": "ncu -u"
   },
   "engines": {
-    "pnpm": ">= 8",
     "node": ">= 18"
   },
   "dependencies": {
