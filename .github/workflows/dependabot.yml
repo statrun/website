@@ -19,7 +19,7 @@ jobs:
           bun-version: latest
 
       - uses: actions/checkout@master
-      - run: rm -rf yarn.lock pnpm-lock.yaml bun.lockb
+      # - run: rm -rf yarn.lock pnpm-lock.yaml bun.lockb
       - run: bunx npm-check-updates -u
       - run: bun i -f
 
