@@ -1,6 +1,6 @@
-import { type LayoutProps } from '@/.next/types/app/layout'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { type PropsWithChildren } from 'react'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: '',
 }
 
-type Props = {} & LayoutProps
+type Props = PropsWithChildren
 
 export default function RootLayout({ children }: Props) {
   return (
