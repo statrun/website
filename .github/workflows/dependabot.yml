@@ -2,7 +2,7 @@ name: Dependabot
 
 on:
   schedule:
-    - cron: '0 0 * * 5'
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -17,7 +17,8 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: latest
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - run: rm -rf yarn.lock pnpm-lock.yaml package-lock.json
       - run: pnpx npm-check-updates -u
       - run: pnpm i --no-frozen-lockfile
 

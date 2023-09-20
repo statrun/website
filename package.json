@@ -1,6 +1,5 @@
 {
-  "name": "stat",
-  "version": "0.0.0",
+  "name": "website",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
